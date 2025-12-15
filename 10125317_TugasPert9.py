@@ -39,37 +39,41 @@ print('''
         4. Segitiga
         0. Keluar
     ''')
-print('-' * 40)
-pilihan = str(input('Pilihan anda ? '))
-print('-' * 40)
-if pilihan == "1" :
-    print('Perhitungan luas dan keliling Lingkaran')
+while True :
     print('-' * 40)
-    jariJari = int(input('Radius : '))
-    print(f'Luas lingkaran = {luasLingkaran(jariJari)} [output]')
-    print(f'Keliling lingkaran = {kelilingLingkaran(jariJari)} [output]')
-elif pilihan == "2" :
-    print('Perhitungan luas dan keliling Bujur Sangkar')
+    pilihan = str(input('Pilihan anda ? '))
     print('-' * 40)
-    sisiBujurSangkar = int(input('Sisi : '))
-    print(f'Luas bujur sangkar = {luasBujurSangkar(sisiBujurSangkar)} [output]')
-    print(f'Keliling bujur sangkar = {kelilingBujurSangkar(sisiBujurSangkar)} [output]')
-elif pilihan == "3" :
-    print('Perhitungan luas dan keliling Persegi Panjang')
-    print('-' * 40)
-    panjangPersegiPanjang = int(input('Panjang : '))
-    lebarPersegiPanjang = int(input('Lebar : '))
-    print(f'Luas Persegi Panjang = {luasPersegiPanjang(panjangPersegiPanjang, lebarPersegiPanjang)} [output]')
-    print(f'Keliling Persegi Panjang = {kelilingPersegiPanjang(panjangPersegiPanjang, lebarPersegiPanjang)} [output]')
-elif pilihan == "4" :
-    print('Perhitungan luas dan keliling Segitiga')
-    print('-' * 40)
-    alasSegitiga = int(input('Alas : '))
-    tinggiSegitiga = int(input('Tinggi : '))
-    sisi1Segitiga = int(input('Sisi 1 : '))
-    sisi2Segitiga = int(input('Sisi 2 : '))
-    sisi3Segitiga = int(input('Sisi 3 : '))
-    print(f'Luas segitiga = {luasSegitiga(alasSegitiga, tinggiSegitiga)} [output]')
-    print(f'Keliling segitiga = {kelilingSegitiga(sisi1Segitiga, sisi2Segitiga, sisi3Segitiga)} [output]')
-else :
-    print('Pilihan tidak tersedia')
+    if pilihan == "1" :
+        print('Perhitungan luas dan keliling Lingkaran')
+        print('-' * 40)
+        jariJari = int(input('Radius : '))
+        print(f'Luas lingkaran = {luasLingkaran(jariJari)} [output]')
+        print(f'Keliling lingkaran = {kelilingLingkaran(jariJari)} [output]')
+    elif pilihan == "2" :
+        print('Perhitungan luas dan keliling Bujur Sangkar')
+        print('-' * 40)
+        sisiBujurSangkar = int(input('Sisi : '))
+        print(f'Luas bujur sangkar = {luasBujurSangkar(sisiBujurSangkar)} [output]')
+        print(f'Keliling bujur sangkar = {kelilingBujurSangkar(sisiBujurSangkar)} [output]')
+    elif pilihan == "3" :
+        print('Perhitungan luas dan keliling Persegi Panjang')
+        print('-' * 40)
+        panjangPersegiPanjang = int(input('Panjang : '))
+        lebarPersegiPanjang = int(input('Lebar : '))
+        print(f'Luas Persegi Panjang = {luasPersegiPanjang(panjangPersegiPanjang, lebarPersegiPanjang)} [output]')
+        print(f'Keliling Persegi Panjang = {kelilingPersegiPanjang(panjangPersegiPanjang, lebarPersegiPanjang)} [output]')
+    elif pilihan == "4" :
+        print('Perhitungan luas dan keliling Segitiga')
+        print('-' * 40)
+        alasSegitiga = int(input('Alas : '))
+        tinggiSegitiga = int(input('Tinggi : '))
+        sisi1Segitiga = int(input('Sisi 1 : '))
+        sisi2Segitiga = int(input('Sisi 2 : '))
+        sisi3Segitiga = int(input('Sisi 3 : '))
+        print(f'Luas segitiga = {luasSegitiga(alasSegitiga, tinggiSegitiga)} [output]')
+        print(f'Keliling segitiga = {kelilingSegitiga(sisi1Segitiga, sisi2Segitiga, sisi3Segitiga)} [output]')
+    elif pilihan == "0" :
+        print('Anda keluar dari program')
+        break
+    else :
+        print('Pilihan tidak tersedia')
